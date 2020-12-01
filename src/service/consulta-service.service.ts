@@ -16,4 +16,13 @@ async getUser() {
       console.error(error);
     }
   }
+
+  async getService(key) {
+    try {
+      const response = await axios.get('http://www.indecon.online/values/' + key);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }
