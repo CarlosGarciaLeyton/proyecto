@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import axios from 'axios';
 
 @Injectable({
@@ -12,6 +13,7 @@ async getUser() {
     try {
       const response = await axios.get('https://www.indecon.online/last');
       console.log(response);
+      return response.data;
     } catch (error) {
       console.error(error);
     }
